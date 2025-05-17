@@ -1,52 +1,64 @@
 # class-planner
-Desafo imersão IA Alura + Gemini
+Desafio imersão IA Alura + Gemini
 
-# 🤖 Gerador de Plano de Aula com Google Gemini e Google ADK 📚
+# ✨ Gerador de Plano de Aula com Gemini e Agentes ✨
 
-Um projeto Python que utiliza o modelo Gemini do Google e o Agent Development Kit (ADK) para auxiliar professores e educadores na criação automatizada de planos de aula, sugerindo conteúdos, atividades, avaliações e organizando um cronograma.
+Seja bem-vindo ao meu projeto! 🎉 Este é um sistema inovador que utiliza o poder do modelo Gemini e uma arquitetura de agentes para automatizar a criação de planos de aula completos e personalizados.
 
-## ✨ Funcionalidades
+📚 **Qual o problema que ele resolve?**
 
-*   Sugestão de conteúdo didático com base na série, disciplina e tema.
-*   Sugestão de atividades lúdicas e práticas.
-*   Sugestão de instrumentos de avaliação (formativa e somativa).
-*   Geração de um cronograma semanal com base na duração e nos elementos do plano.
+Criar planos de aula de qualidade leva tempo e exige pesquisa sobre conteúdo, atividades e formas de avaliação. Este projeto simplifica esse processo para professores e educadores, gerando planos de aula relevantes e alinhados com a BNCC de forma rápida e eficiente.
 
-## 🚀 Como Usar (Google Colab)
+🚀 **Como funciona?**
 
-Este projeto é projetado para rodar no Google Colab.
+O coração do sistema é um `PlanejadorPedagogico` que orquestra o trabalho de diferentes agentes especializados:
 
-1.  **Abra o Notebook:** Clone ou baixe este repositório. Abra o arquivo `.ipynb` no Google Colab.
-2.  **Configure a API Key:**
-    *   Certifique-se de ter uma chave de API para o Google Gemini. Você pode obtê-la no [Google AI Studio](https://aistudio.google.com/).
-    *   No Colab, clique no ícone de chave (Secrets) na barra lateral esquerda.
-    *   Clique em `ADD NEW SECRET`.
-    *   Defina o nome como `GOOGLE_API_KEY`.
-    *   Cole sua chave de API no campo `Value`.
-    *   Certifique-se de que a opção "Notebook access" está marcada para este secret.
-3.  **Instalar Dependências:** Execute as primeiras células do notebook que contêm os comandos `!pip install` e `!apt-get install`.
-4.  **Executar o Código:** Execute as células restantes do notebook na sequência. O notebook pedirá a série, disciplina, tema e duração do plano de aula via entrada de texto.
-5.  **Exportar:** Após a geração do plano de aula, as funções de exportação para PDF e Google Sheet serão executadas, oferecendo os arquivos para download ou criando a planilha no seu Google Drive.
+*   **Agente Conteúdo:** Sugere o conteúdo didático para a aula, baseado na série, disciplina e tema, alinhado com a BNCC.
+*   **Agente Atividades:** Propõe atividades lúdicas e práticas adequadas para a série e tema.
+*   **Agente Avaliação:** Sugere instrumentos de avaliação formativa e somativa para o tema.
+*   **Agente Agenda:** Organiza o conteúdo, atividades e avaliações em um cronograma semanal.
 
-## ⚙️ Requisitos
+Cada agente utiliza o modelo Gemini para gerar respostas criativas e contextualmente relevantes.
 
-*   Conta Google (para usar o Google Colab).
-*   Chave de API do Google Gemini.
-*   Ambiente Google Colab para executar o notebook.
+🔧 **Tecnologias Utilizadas:**
 
-## 📚 Bibliotecas Utilizadas
+*   Google Gemini API
+*   Google Agent Development Kit (ADK)
+*   Python
 
-*   `google.generativeai` (Google Gemini SDK)
-*   `google.adk` (Google Agent Development Kit)
-*   `pdfkit`
-*   `wkhtmltopdf` (ferramenta externa)
-*   `google.colab.auth`, `googleapiclient`, `google-auth-oauthlib`, etc. (para Google Sheets/Drive API)
-*   `textwrap`
-*   `IPython.display`
-*   `requests`
-*   `warnings`
-*   `os`
+💡 **Como usar:**
 
-## 🤝 Contribuição
+1.  Clone o repositório.
+2.  Instale as dependências: `pip install -q google-genai google-adk`
+3.  Obtenha sua API Key do Google Gemini e configure no Colab (usando `userdata.get('GOOGLE_API_KEY')`).
+4.  Execute o código no Google Colab.
+5.  O programa solicitará as informações da aula (Série, Disciplina, Tema e Duração).
 
-Contribuições são bem-vindas! Se você tiver ideias para melhorar o projeto, sinta-se à vontade para abrir uma *issue* ou enviar um *pull request*.
+🎁 **Resultados:**
+
+O sistema irá gerar um plano de aula completo, com:
+
+*   Conteúdo detalhado.
+*   Sugestões de atividades práticas.
+*   Sugestões de instrumentos de avaliação.
+*   Um cronograma semanal organizado.
+
+🏆 **Por que este projeto é especial?**
+
+*   **Inovação:** Utiliza a combinação de modelos de linguagem avançados (Gemini) e arquitetura de agentes para resolver um problema prático na educação.
+*   **Eficiência:** Automatiza um processo que consome muito tempo dos educadores.
+*   **Criatividade:** Os agentes geram conteúdo e sugestões criativas e relevantes.
+*   **Flexibilidade:** Permite personalizar o plano de aula com base nas necessidades específicas do usuário.
+
+🔮 **Próximos passos (Ideias para futuras melhorias):**
+
+*   Adicionar a possibilidade de o usuário refinar as sugestões dos agentes.
+*   Expandir a base de conhecimento dos agentes para incluir mais disciplinas e níveis de ensino.
+*   Desenvolver uma interface mais amigável (Web ou GUI).
+*   Integrar com outras ferramentas educacionais.
+
+👩‍🏫 **Contribuições:**
+
+Sugestões e contribuições são muito bem-vindas! Se você tiver ideias para melhorar este projeto, sinta-se à vontade para abrir uma issue ou enviar um pull request.
+
+Obrigado por conferir meu projeto! Espero que goste! 😊
