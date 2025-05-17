@@ -30,8 +30,21 @@ Cada agente utiliza o modelo Gemini para gerar respostas criativas e contextualm
 
 1.  Clone o repositório.
 2.  Instale as dependências: `pip install -q google-genai google-adk`
-3.  Obtenha sua API Key do Google Gemini e configure no Colab (usando `userdata.get('GOOGLE_API_KEY')`).
-4.  Execute o código no Google Colab.
+3.  Obtenha e Configure sua API Key do Google Gemini:
+    *   **Obtendo a chave:**
+        1.  Faça login na sua conta Google.
+        2.  Visite o Google AI Studio.
+        3.  Clique em "Get API key in Google AI Studio".
+        4.  Revise e aprove os termos de serviço.
+        5.  Crie sua API key.
+    *   **Configurando no Google Colab:**
+        *   No Google Colab, vá para o menu à esquerda, clique no ícone de chave (`🔑 Secrets`).
+        *   Clique em `+ New secret`.
+        *   No campo `Name`, digite `GOOGLE_API_KEY`.
+        *   No campo `Value`, cole a API Key que você obteve no Google AI Studio.
+        *   Certifique-se de que a caixa `Notebook access` esteja marcada.
+        *   O código no notebook já está configurado para ler a chave automaticamente a partir do secrets do Colab.
+4.  Execute o código no Google Colab em sequência.
 5.  O programa solicitará as informações da aula (Série, Disciplina, Tema e Duração).
 
 🎁 **Resultados:**
